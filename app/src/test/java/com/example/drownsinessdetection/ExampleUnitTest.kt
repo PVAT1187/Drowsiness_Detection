@@ -1,4 +1,4 @@
-package com.example.drowsinessdetection
+package com.example.drownsinessdetection
 
 import org.junit.Test
 
