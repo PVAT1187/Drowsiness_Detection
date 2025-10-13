@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">DrownsinessDetection</string>
+
+    <string name="face_detection_title">Face detection</string>
+    <string name="face_detection_description">Detect face on close-range images with drowsiness detection.</string>
+    <string name="face_detection_url">https://developers.google.com/static/ml-kit/vision/face-detection/images/face_detection2x.png</string>
 </resources>

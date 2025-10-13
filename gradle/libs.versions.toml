@@ -12,6 +12,10 @@ hiltAndroid = "2.57"
 daggerHilt = "2.57"
 kspPlugin = "2.2.20-2.0.4"
 cameraCamera2 = "1.4.2"
+accompanistNavigationAnimation = "0.36.0"
+accompanistPermissions = "0.19.0"
+coilCompose = "2.7.0"
+faceDetection = "16.1.7"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -33,6 +37,10 @@ hilt-android-compiler = { module = "com.google.dagger:hilt-android-compiler", ve
 androidx-camera-camera2 = { module = "androidx.camera:camera-camera2", version.ref = "cameraCamera2" }
 androidx-camera-view = { module = "androidx.camera:camera-view", version.ref = "cameraCamera2" }
 androidx-camera-lifecycle = { module = "androidx.camera:camera-lifecycle", version.ref = "cameraCamera2" }
+accompanist-navigation-animation = { module = "com.google.accompanist:accompanist-navigation-animation", version.ref = "accompanistNavigationAnimation" }
+accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
+coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
+face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
