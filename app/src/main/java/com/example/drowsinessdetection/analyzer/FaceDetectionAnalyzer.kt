@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.analyzer
+package com.example.drowsinessdetection.analyzer
 
 import android.annotation.SuppressLint
 import androidx.camera.core.ImageAnalysis

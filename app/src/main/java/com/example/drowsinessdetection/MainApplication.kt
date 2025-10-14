@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection
+package com.example.drowsinessdetection
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp

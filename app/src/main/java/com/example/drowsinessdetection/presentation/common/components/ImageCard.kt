@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.presentation.common.components
+package com.example.drowsinessdetection.presentation.common.components
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable

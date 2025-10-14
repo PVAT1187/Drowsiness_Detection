@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.presentation.common.components
+package com.example.drowsinessdetection.presentation.common.components
 
 import android.content.Context
 import androidx.camera.core.CameraSelector

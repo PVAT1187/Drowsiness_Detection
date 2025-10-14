@@ -16,6 +16,7 @@ accompanistNavigationAnimation = "0.36.0"
 accompanistPermissions = "0.19.0"
 coilCompose = "2.7.0"
 faceDetection = "16.1.7"
+opentelemetry = "1.33.0"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -41,6 +42,10 @@ accompanist-navigation-animation = { module = "com.google.accompanist:accompanis
 accompanist-permissions = { module = "com.google.accompanist:accompanist-permissions", version.ref = "accompanistPermissions" }
 coil-compose = { module = "io.coil-kt:coil-compose", version.ref = "coilCompose" }
 face-detection = { module = "com.google.mlkit:face-detection", version.ref = "faceDetection" }
+opentelemetry-api = { module = "io.opentelemetry:opentelemetry-api", version.ref = "opentelemetry" }
+opentelemetry-sdk = { module = "io.opentelemetry:opentelemetry-sdk", version.ref = "opentelemetry" }
+opentelemetry-sdk-metrics = { module = "io.opentelemetry:opentelemetry-sdk-metrics", version.ref = "opentelemetry" }
+opentelemetry-exporter-otlp = { module = "io.opentelemetry:opentelemetry-exporter-otlp", version.ref = "opentelemetry" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

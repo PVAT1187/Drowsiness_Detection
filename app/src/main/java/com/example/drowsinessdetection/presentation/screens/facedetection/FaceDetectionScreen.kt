@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.presentation.screens.facedetection
+package com.example.drowsinessdetection.presentation.screens.facedetection
 
 import android.graphics.PointF
 import android.widget.Toast
@@ -27,7 +27,6 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Canvas
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toComposeRect
 import androidx.compose.ui.graphics.vector.ImageVector
@@ -35,17 +34,16 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.drownsinessdetection.R
-import com.example.drownsinessdetection.analyzer.FaceDetectionAnalyzer
-import com.example.drownsinessdetection.presentation.common.components.CameraView
-import com.example.drownsinessdetection.presentation.common.utils.adjustPoint
-import com.example.drownsinessdetection.presentation.common.utils.adjustSize
-import com.example.drownsinessdetection.presentation.common.utils.drawBounds
+import com.example.drowsinessdetection.R
+import com.example.drowsinessdetection.analyzer.FaceDetectionAnalyzer
+import com.example.drowsinessdetection.presentation.common.components.CameraView
+import com.example.drowsinessdetection.presentation.common.utils.adjustPoint
+import com.example.drowsinessdetection.presentation.common.utils.adjustSize
+import com.example.drowsinessdetection.presentation.common.utils.drawBounds
 import com.google.accompanist.permissions.ExperimentalPermissionsApi
 import com.google.accompanist.permissions.PermissionRequired
 import com.google.accompanist.permissions.rememberPermissionState
 import com.google.mlkit.vision.face.Face
-import java.nio.file.WatchEvent
 
 @OptIn(ExperimentalPermissionsApi::class)
 @Composable

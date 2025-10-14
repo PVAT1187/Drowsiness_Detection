@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.analyzer
+package com.example.drowsinessdetection.analyzer
 
 import com.google.mlkit.vision.face.Face
 import javax.inject.Inject

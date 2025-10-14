@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.presentation.common.utils
+package com.example.drowsinessdetection.presentation.common.utils
 
 import android.graphics.PointF
 import androidx.compose.ui.geometry.Offset

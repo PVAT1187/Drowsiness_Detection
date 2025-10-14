@@ -7,13 +7,13 @@ plugins {
 }
 
 android {
-    namespace = "com.example.drownsinessdetection"
+    namespace = "com.example.drowsinessdetection"
     compileSdk {
         version = release(36)
     }
 
     defaultConfig {
-        applicationId = "com.example.drownsinessdetection"
+        applicationId = "com.example.drowsinessdetection"
         minSdk = 24
         targetSdk = 36
         versionCode = 1
@@ -78,4 +78,14 @@ dependencies {
 
     // MLKit
     implementation(libs.face.detection)
+
+    // OpenTelemetry Core
+    implementation(libs.opentelemetry.api)
+    implementation(libs.opentelemetry.sdk)
+
+    // Metrics
+    implementation(libs.opentelemetry.sdk.metrics)
+
+    // Exporting (OTLP = OpenTelemetry Protocol)
+    implementation(libs.opentelemetry.exporter.otlp)
 }

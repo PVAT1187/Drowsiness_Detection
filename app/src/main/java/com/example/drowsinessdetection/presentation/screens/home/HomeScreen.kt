@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.presentation.screens.home
+package com.example.drowsinessdetection.presentation.screens.home
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.padding
@@ -18,9 +18,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import com.example.drownsinessdetection.navigation.Screen
-import com.example.drownsinessdetection.presentation.common.components.ImageCard
-import com.example.drownsinessdetection.R as R
+import com.example.drowsinessdetection.navigation.Screen
+import com.example.drowsinessdetection.presentation.common.components.ImageCard
+import com.example.drowsinessdetection.R as R
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

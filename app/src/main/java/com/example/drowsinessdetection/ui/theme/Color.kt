@@ -1,4 +1,4 @@
-package com.example.drownsinessdetection.ui.theme
+package com.example.drowsinessdetection.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

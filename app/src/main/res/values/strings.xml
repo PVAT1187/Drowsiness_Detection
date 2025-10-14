@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">DrownsinessDetection</string>
+    <string name="app_name">DrowsinessDetection</string>
 
     <string name="face_detection_title">Face detection</string>
     <string name="face_detection_description">Detect face on close-range images with drowsiness detection.</string>
