@@ -6,6 +6,7 @@ import io.opentelemetry.sdk.OpenTelemetrySdk
 import io.opentelemetry.sdk.metrics.SdkMeterProvider
 import io.opentelemetry.sdk.metrics.export.MetricExporter
 import io.opentelemetry.exporter.otlp.metrics.OtlpGrpcMetricExporter
+import io.opentelemetry.exporter.otlp.http.metrics.OtlpHttpMetricExporter
 import io.opentelemetry.sdk.metrics.export.PeriodicMetricReader
 import kotlin.time.Duration.Companion.seconds
 import kotlin.time.toJavaDuration
@@ -33,12 +34,12 @@ object TelemetryManager {
         meter = GlobalOpenTelemetry.getMeter("drowsiness-metrics")
     }
 
-    fun recordBlinkEvent() {
-        val blinkCounter = meter.counterBuilder("blink_events")
-            .setDescription("Number of blinks detected")
-            .setUnit("blinks")
+    fun recordDrowsyAlertEvent() {
+        val drowsyAlertCounter = meter.counterBuilder("drowsy_alert_events")
+            .setDescription("Number of drowsy alerts detected")
+            .setUnit("alerts")
             .build()
 
-        blinkCounter.add(1)
+        drowsyAlertCounter.add(1)
     }
 }
