@@ -14,8 +14,8 @@ object TelemetryManager {
     private lateinit var meter: Meter
 
     fun initialize() {
-        val exporter: MetricExporter = OtlpGrpcMetricExporter.builder()
-            .setEndpoint("http://10.0.2.2:4317")
+        val exporter: MetricExporter = OtlpHttpMetricExporter.builder()
+            .setEndpoint("http://10.0.2.2:4318/v1/metrics")
             .build()
 
         val reader = PeriodicMetricReader.builder(exporter)
