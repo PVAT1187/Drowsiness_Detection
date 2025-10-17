@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.dagger.hilt.android)
     alias(libs.plugins.ksp)
+    id("com.google.gms.google-services")
 }
 
 android {
@@ -79,13 +80,7 @@ dependencies {
     // MLKit
     implementation(libs.face.detection)
 
-    // OpenTelemetry Core
-    implementation(libs.opentelemetry.api)
-    implementation(libs.opentelemetry.sdk)
-
-    // Metrics
-    implementation(libs.opentelemetry.sdk.metrics)
-
-    // Exporting (OTLP = OpenTelemetry Protocol)
-    implementation(libs.opentelemetry.exporter.otlp)
+    // Firebase BoM
+    implementation(platform(libs.firebase.bom))
+    implementation(libs.firebase.analytics)
 }

@@ -1,10 +1,10 @@
 package com.example.drowsinessdetection.analyzer
 
-import com.example.drowsinessdetection.metrics.TelemetryManager
 import com.google.mlkit.vision.face.Face
 import javax.inject.Inject
 
 import android.util.Log
+import com.example.drowsinessdetection.metrics.MetricManager
 
 internal class FaceDrowsinessAnalyzer
     @Inject
@@ -16,8 +16,7 @@ internal class FaceDrowsinessAnalyzer
 
         private val history = ArrayDeque<Boolean>(maxHistory)
 
-        private var lastAlertTime = 0L
-        private var alertCooldown = 3000L
+        private var alertTriggered = false
 
         fun isDrowsy(face: Face): Boolean {
             val leftProb = face.leftEyeOpenProbability
@@ -27,21 +26,24 @@ internal class FaceDrowsinessAnalyzer
                 return false
             }
 
-
             val drowsy = leftProb < drowsinessThreshold && rightProb < drowsinessThreshold
 
-            val currentTime = System.currentTimeMillis()
-            if (drowsy && currentTime - lastAlertTime > alertCooldown) {
-                TelemetryManager.recordDrowsyAlertEvent()
-                Log.d("Telemetry", "Drowsy event recorded to OpenTelemetry")
-                lastAlertTime = currentTime
-            }
             history.addLast(drowsy)
             if (history.size > maxHistory) {
                 history.removeFirst()
             }
 
-            return history.size == maxHistory && history.all { it }
+            val isDrowsy = history.size == maxHistory && history.all { it }
+
+            if (isDrowsy && !alertTriggered) {
+                MetricManager.recordDrowsyAlertEvent()
+                Log.d("FaceDrowsinessAnalyzer", "Drowsiness detected! Metric recorded.")
+                alertTriggered = true
+            } else if (!isDrowsy) {
+                alertTriggered = false
+            }
+
+            return isDrowsy
         }
 
         companion object {

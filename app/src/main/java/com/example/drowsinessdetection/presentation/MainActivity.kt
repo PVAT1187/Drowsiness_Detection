@@ -11,13 +11,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.drowsinessdetection.navigation.AppNavigation
 import com.example.drowsinessdetection.ui.theme.DrowsinessDetectionTheme
-import com.example.drowsinessdetection.metrics.TelemetryManager
+import com.example.drowsinessdetection.metrics.MetricManager
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        TelemetryManager.initialize()
+        MetricManager.initialize(this)
 
         setContent {
             DrowsinessDetectionTheme {

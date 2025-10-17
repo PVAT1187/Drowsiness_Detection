@@ -56,6 +56,6 @@ fun HomeScreen(navController: NavController) {
                     )
                 }
             }
-        },
+        }
     )
 }
