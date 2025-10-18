@@ -7,7 +7,7 @@ env:
 on:
   push:
     branches:
-      - 'main'
+      - main
   workflow_dispatch:
 
 jobs:
@@ -23,51 +23,51 @@ jobs:
       - name: Set repository name as env variable
         run: echo "repository_name=$(echo '${{ github.repository }}' | awk -F '/' '{print $2}')" >> $GITHUB_ENV
 
-      - name: Set Up JDK
+      - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
-          distribution: 'zulu'
-          java-version: '17'
-          cache: 'gradle'
+          distribution: zulu
+          java-version: 17
+          cache: gradle
 
-      - name: Change wrapper permissions
+      - name: Make Gradle wrapper executable
         run: chmod +x ./gradlew
 
-      - name: Run gradle tests
+      - name: Run Gradle tests
         run: ./gradlew test
 
-      - name: Build gradle project
+      - name: Build Gradle project
         run: ./gradlew build
 
-      - name: Build apk debug project (APK) - ${{ env.main_project_module }} module
+      - name: Build APK Debug - ${{ env.main_project_module }} module
         run: ./gradlew assembleDebug
 
-      - name: Build apk release project (APK) - ${{ env.main_project_module }} module
+      - name: Build APK Release - ${{ env.main_project_module }} module
         run: ./gradlew assemble
 
-      - name: Build app bundle release (AAB) - ${{ env.main_project_module }} module
+      - name: Build App Bundle Release (AAB) - ${{ env.main_project_module }} module
         run: ./gradlew ${{ env.main_project_module }}:bundleRelease
 
-      - name: Upload APK Debug - ${{ env.repository_name }}
+      - name: Upload APK Debug
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) debug generated
+          name: ${{ env.date_today }}-${{ env.playstore_name }}-${{ env.repository_name }}-APK-debug
           path: ${{ env.main_project_module }}/build/outputs/apk/debug/
 
-      - name: Upload APK Release - ${{ env.repository_name }}
+      - name: Upload APK Release
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - APK(s) release generated
+          name: ${{ env.date_today }}-${{ env.playstore_name }}-${{ env.repository_name }}-APK-release
           path: ${{ env.main_project_module }}/build/outputs/apk/release/
 
-      - name: Upload AAB (App Bundle) Release - ${{ env.repository_name }}
+      - name: Upload AAB Release
         uses: actions/upload-artifact@v4
         with:
-          name: ${{ env.date_today }} - ${{ env.playstore_name }} - ${{ env.repository_name }} - App bundle(s) AAB release generated
+          name: ${{ env.date_today }}-${{ env.playstore_name }}-${{ env.repository_name }}-AAB-release
           path: ${{ env.main_project_module }}/build/outputs/bundle/release/
 
       - name: Upload to Firebase App Distribution (Optional)
-        if: ${{ secrets.FIREBASE_AUTH_TOKEN }}
+        if: ${{ !empty(secrets.FIREBASE_AUTH_TOKEN) }}
         uses: wzieba/Firebase-Distribution-Github-Action@v1
         with:
           appId: ${{ secrets.FIREBASE_APP_ID }}
