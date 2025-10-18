@@ -66,11 +66,3 @@ jobs:
           name: ${{ env.date_today }}-${{ env.playstore_name }}-${{ env.repository_name }}-AAB-release
           path: ${{ env.main_project_module }}/build/outputs/bundle/release/
 
-      - name: Upload to Firebase App Distribution (Optional)
-        if: ${{ !empty(secrets.FIREBASE_AUTH_TOKEN) }}
-        uses: wzieba/Firebase-Distribution-Github-Action@v1
-        with:
-          appId: ${{ secrets.FIREBASE_APP_ID }}
-          token: ${{ secrets.FIREBASE_AUTH_TOKEN }}
-          groups: testers
-          file: ${{ env.main_project_module }}/build/outputs/bundle/release/app-release.aab
