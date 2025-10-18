@@ -12,12 +12,18 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.example.drowsinessdetection.navigation.AppNavigation
 import com.example.drowsinessdetection.ui.theme.DrowsinessDetectionTheme
 import com.example.drowsinessdetection.metrics.MetricManager
+import java.lang.Exception
+import android.util.Log
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        MetricManager.initialize(this)
+        try {
+            MetricManager.initialize(this)
+        } catch (e: Exception) {
+            Log.w("Firebase", "Firebase not initialized. Missing google-services.json")
+        }
 
         setContent {
             DrowsinessDetectionTheme {
