@@ -24,15 +24,16 @@ Steps
 ---
 
 ## Usage
-
+<img width="347" height="704" alt="Screenshot 2025-10-19 000658" src="https://github.com/user-attachments/assets/d842d404-9cb5-4a50-95e5-8728f3ac91d4" />
+<img width="215" height="168" alt="Screenshot 2025-10-19 000840" src="https://github.com/user-attachments/assets/8cdb512a-8b50-463c-8dc8-54d588625266" />
 
 ---
 
 ## Features
-- Analyzes Real-time Facial Landmark and Eye-open Probabilities by using Google ML Kit's Face Detection
-- Displays a warning panel on screen when drowsiness is detected.
+- Analyzes real-time facial landmarks and eye-open probabilities using Google ML Kit’s Face Detection API to detect driver drowsiness
+- Displays a warning panel on screen when drowsiness is detected
 - Firebase Integration for analytics and event logging
-- Data Export to BigQuery for large-scale analysis and visualization.
+- Data Export to BigQuery for large-scale analysis and visualization
 
 ---
 
@@ -46,9 +47,8 @@ Steps
 ---
 
 ## Authors
-**Vu Anh Thu Phan**  
+**Vu Anh Thu Phan** - [GitHub](https://github.com/PVAT1187)
 - Responsible for Firebase analytics integration, CI/CD pipeline setup, and data export to BigQuery 
-- [GitHub](https://github.com/PVAT1187)
 
 **Collaborating Developer**  
 - Contributed to Core Android design and ML Kit–based drowsiness detection implementation
