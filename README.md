@@ -4,6 +4,23 @@ A real-time Android application designed to monitor driver drowsiness by analyzi
 
 ---
 
+## Design Overview
+This project was created to explore computer vision and machine learning on Android through real-time driver monitoring. The goal was to build a system that detects drowsiness by analyzing facial features while maintaining a scalable module.
+   - Facial Analysis: Uses Google ML Kit to detect eye landmarks and probabilities of eye openness in real-time
+   - Alert System: Provides immediate visual warnings when drowsiness is detected
+   - Data Analytics: Logs events to Firebase and exports to BigQuery for monitoring patterns and large-scale analysis
+   - System Design: Modular structure separates detection logic, UI, and backend analytics, allowing future enhancements         easily
+
+---
+
+## Design Goals
+- Provide real-time, immidiate feedback to enhance drivers safety
+- Implement a modular architecture separating detection logic, UI, and backend analytics
+- Integrate cloud-based analytics to monitor performance and usage data
+- Maintain scalability and flexibility for future improvements, such as new alert mechanisms,...
+
+---
+
 ## Setup Instructions
 Prerequisites
 - Android Studio (Arctic Fox or newer)
@@ -42,7 +59,13 @@ Steps
 - Frameworks: Android SDK, Google ML Kit
 - Backend/Analytics: Firebase Realtime Database, Firebase Analytics, BigQuery
 - Concepts: Computer Vision, Real-Time Processing, Machine Learning Integration, CI/CD
-- IDE/Tools: Android Studio, Git, GitHub Actions
+- IDE/Tools: Android Studio, Git/GitHub, GitHub Actions
+
+---
+
+## Future Improvement
+- Explore new alert mechanisms to enhance respnsiveness
+- Expand analytics capabilities with more detailed event tracking
 
 ---
 
