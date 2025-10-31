@@ -1,6 +1,6 @@
 # Driver Drowsiness Detection (Android Application)
 
-A real-time Android application designed to monitor driver drowsiness by analyzing facial features such as eye movements. 
+A real-time Android application designed to monitor driver drowsiness by analyzing facial features such as eye movements uising Google ML Kit. Integrated with Firebase and BigQuery for analytics, data storage and visualization.
 
 ---
 
@@ -50,7 +50,7 @@ Steps
 **Vu Anh Thu Phan** - [GitHub](https://github.com/PVAT1187)
 - Responsible for Firebase analytics integration, CI/CD pipeline setup, and data export to BigQuery 
 
-**Collaborating Developer**  
+**Collaborating Developers**  
 - Contributed to Core Android design and ML Kit–based drowsiness detection implementation
 
 
