@@ -39,8 +39,8 @@ Steps
    git clone https://github.com/PVAT1187/Drowsiness_Detection.git
 2. Open the project in Android Studio
 3. To enable Firebase features:
-- Obtain your google-services.json file from the Firebase Console
-- Place it in the app/ directory.
+   - Obtain your google-services.json file from the Firebase Console
+   - Place it in the app/ directory.
 4. Build and run the application on your device or emulator
 
 ---
@@ -54,7 +54,7 @@ Steps
 ## Contributors
 **Vu Anh Thu Phan** - [GitHub](https://github.com/PVAT1187)
 - Integrated Firebase Analytics and data export to BigQuery
-- configured the CI/CD pipeline
+- Configured the CI/CD pipeline
   
 **Collaborating Developers**  
 - Contributed to the core Android application and ML Kit-based drowsiness detection
