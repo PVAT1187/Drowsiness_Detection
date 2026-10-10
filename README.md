@@ -9,7 +9,7 @@ This project was created to explore computer vision and machine learning on Andr
    - Facial Analysis: Uses Google ML Kit to detect eye landmarks and probabilities of eye openness in real-time
    - Alert System: Provides immediate visual warnings when drowsiness is detected
    - Data Analytics: Logs events to Firebase and exports to BigQuery for monitoring patterns and large-scale analysis
-   - System Design: Modular structure separates detection logic, UI, and backend analytics, allowing future enhancements         easily
+   - System Design: Modular structure separates detection logic, UI, and backend analytics, allowing future enhancements easily
 
 ---
 
@@ -57,15 +57,9 @@ Steps
 ## Tech Stack
 - Programming Language: Kotlin
 - Frameworks: Android SDK, Google ML Kit
-- Backend/Analytics: Firebase Realtime Database, Firebase Analytics, BigQuery
+- Backend/Analytics: Firebase Analytics, BigQuery
 - Concepts: Computer Vision, Real-Time Processing, Machine Learning Integration, CI/CD
-- IDE/Tools: Android Studio, Git/GitHub, GitHub Actions
-
----
-
-## Future Improvement
-- Explore new alert mechanisms to enhance respnsiveness
-- Expand analytics capabilities with more detailed event tracking
+- IDE/Tools: Android Studio, GitHub Actions
 
 ---
 
@@ -75,6 +69,3 @@ Steps
 
 **Collaborating Developers**  
 - Contributed to Core Android design and ML Kit–based drowsiness detection implementation
-
-
-
